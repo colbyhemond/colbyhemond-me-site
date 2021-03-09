@@ -44,7 +44,7 @@ const projects = [
         technologies: ['React', 'Next.js', 'Netlify Identity', 'Netlify', 'AirTable'],
         URL: 'https://elegant-mcnulty-986ed9.netlify.app/',
         gitRepository: 'https://github.com/colbyhemond/dh-goals'
-    },
+    }
       
   ]
   export default (req, res) => {

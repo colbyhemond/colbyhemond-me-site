@@ -36,7 +36,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: orange;
   text-decoration: none;
 }
 
@@ -73,17 +73,23 @@
 
 .grid {
   display: flex;
+  /* flex-direction: row; */
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
   max-width: 800px;
   margin-top: 3rem;
 }
 
 .card {
-  margin: 1rem;
-  width: 15rem;
+  margin: 10px;
+  width: 75%;
   height: 15rem;
+  max-width: 15rem;
+  max-height: 15rem;
+  /* width: 15rem;
+  height: 15rem; */
   /* flex-basis: 35%; */
   padding: 1.5rem;
   text-align: left;
@@ -97,8 +103,9 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  /* color: #0070f3; */
+  color: orange;
+  border-color: orange;
 }
 
 .card h3 {
@@ -135,7 +142,7 @@
   margin: 0 auto;
 }
 
-.row {
+/* .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -144,7 +151,7 @@
 .row div {
   flex-basis: 35%;
   align-self: center;
-}
+} */
 
 
 
@@ -159,7 +166,7 @@
 }
 
 .card:hover .cardTitle {
-  color: #0070f3;
+  color: orange;
 }
 
 .card .cardTitleDark {
@@ -173,5 +180,10 @@
 }
 
 .card:hover .cardTitleDark {
-  color: #0070f3;
+  color: orange;
+}
+
+.content {
+  width: 100%;
+  max-width: 700px;
 }

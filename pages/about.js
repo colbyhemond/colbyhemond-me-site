@@ -27,6 +27,11 @@ export default function About() {
           <span className={styles.cardTitleDark}>Resume</span>
           </div>
         </div> */}
+        <div className={styles.content}>
+        <p>Colby Hemond is a developer currently working on contract as an ABAP Programmer with Pennsylvania State University. Colby also creates websites during his free time through his side business, Colby Hemond LLC. </p>
+        <p>Colby loves the challenge that programming brings, because there's always a problem to be solved.</p>
+        <p>Colby currently lives in New Hampshire with his beautiful wife, Emily, and their dog, Chance. He has also lived in other various parts of the United States: Connecticut, California, and Michigan. When he is not coding, Colby can be found snowboarding, mountain biking, hiking, or checking out a new brewery.</p>
+        </div>
     
       </main>
 
