@@ -13,7 +13,7 @@ export default function Resume(props) {
   let { title } = attributes;
   // const sections = ['summary', 'experience', 'education', 'projects']
   
-  let { data, error } = useSwr('/api/resume_v1/resume', fetcher)
+  let { data, error } = useSwr('/api/resume', fetcher)
   if (error) return <div>Failed to load resume</div>
   if (!data) return <div>Loading...</div>
   // const dateStr = JSON.parse(data.projects)
