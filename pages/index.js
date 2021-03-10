@@ -36,7 +36,7 @@ export default function Home() {
           <div className={styles.card}>
             <span className={styles.cardTitleDark}>Blog</span>
             <div className={styles.cardTextContainer}>
-              <div className={styles.cardText}>this is sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this space this is sample text for a sample blog post that will fill this space this is sample text for a sample blog post that will fill this space this is sample text for a sample blog post that will fill this space</div>
+              <div className={styles.cardText}>Once I get a blog hooked up, this will display the summary of the most recent post.</div>
             </div>
           </div>
           </Link>
