@@ -1,0 +1,20 @@
+---
+slug: How-a-headless-CMS-saved-my-life
+title: How a headless CMS saved my life
+date: 2020-04-27T20:52:08.587Z
+summary: My journey in creating my personal website. From basic HTML and CSS to
+  dabbling with full CMS's, to finding the right balance with a Headless CMS.
+---
+Okay so that might be a bit dramatic...but I am extremely grateful for finding out about headless CMS's.
+
+For the longest time I have been trying to create a website for myself that I am proud of. I feel like I can never be satisfied, which might diagnose me as a perfectionist. I don't know if I would call myself a perfectionist, but maybe the first stage is denial? It has been a long journey, and I wasn't about to settle for creating a website for myself where I didn't have to write my much own code. I wouldn't be able to call myself a developer if that was the case. Here's the short version of how I ended up being "saved by a headless CMS".
+
+When I started out developing I knew I needed to have a personal website so that I can showcase my skills and market myself on the internet. I feel like the progression of my personal website has reflected my learning curve appropriately as well. Of course my first rendition was some simple HTML and CSS, a few pages with some color and style that reflected who I was: simple, a beginner, and a bit void. I needed something more. I was not satisfied yet. So I kept learning. The next rendition was about the same, except for adding in bootstrap to make the styling so much simpler. It was nice being able to find the tricks to make the styling easier. I was getting there and I knew I was on the right track.
+
+As time went by, I got involved with a project that required Joomla to create the website, so I tried redoing my personal website and creating it with Joomla. That was complete overkill. I enjoyed doing the styling and other coding of creating a website. I didn't want to just install a bunch of plug ins. That version never got off the ground, so I kept the previous version of the website and just updated it occasionally.
+
+After that I submerged myself with SAP content, becoming a better developer at my day job, learning design patterns and test driven development. I lost touch with my web development learning during that time. I wanted to start writing content on my own blog. I opted for a WordPress site. It would be quick and easy and the blog engine was already there. It turned out alright, I actually had a website with some content and I was satisfied...enough. But after some time went by, it just wasn't enough. The website was just not me. It did not reflect who I was and the style of website that I wanted to create.
+
+I got really comfortable with my SAP skills and switched gears to focus on my web development skills. I went through FreeCodeCamp.com to re-solidify my foundation. I started to learn a whole lot more JavaScript and started going to some JavaScript and Web Development MeetUps. I learned about React and fell in love with it. I like the structure and reusability of it. I created a couple small sample apps using React and Node.JS. And once I got comfortable I started to create my personal site using React. I created the bones of the website fairly easily, but I wanted the blog aspect of it, and didn't do much research and was kind of dreading figuring out how I wanted to go about it.
+
+One day searching the inter-webs I came across an article that talked about using ButterCMS, this "headless CMS" that you can hook up to a front end. It was amazing. So easy, and exactly what I was looking for. I didn't want to have to code all the components for a blog, let alone how was I going to write the posts. ButterCMS saved my life because I can write all of the blog posts through their UI and just serve them to my website. It's probably the best thing that I've come across in a long time. It gave me the motivation to finish my personal site and I can honestly say that I'm extremely proud of it. It's damn near perfect to me. Of course I'll still make changes and updates. But I think it's something that I'll be happy with for a while!
