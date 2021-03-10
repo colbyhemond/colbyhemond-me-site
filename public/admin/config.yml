@@ -18,7 +18,7 @@ collections:
     create: true
     identifier_field: slug
     slug: "{{slug}}"
-    summary: "{{summary}}"
+    summary: "{{title}}"
     fields:
       - {label: "Slug", name: "slug", widget: "string", required: true}
       - {label: "Title", name: "title", widget: "string", required: true}
