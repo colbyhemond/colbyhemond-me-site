@@ -1,0 +1,23 @@
+.button {
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    padding: 0.7rem;
+    margin: 10px 0 0 20px;
+    
+    /* make icon center */
+    display:inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button:hover {
+    border-color: orange;
+  }
+  
+  .button img {
+    width: 100%;
+    height: auto;
+    max-width: 30px;
+  }

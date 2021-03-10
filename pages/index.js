@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { attributes, react as HomeContent } from '../content/home.md';
+import Footer from '../components/Footer'
 
 export default function Home() {
   let { title } = attributes;
@@ -18,7 +19,6 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-        {/* <div className={styles.row}> */}
         <Link href="/about">
           <div className={styles.card}>
           <div className={styles.image}>
@@ -33,19 +33,10 @@ export default function Home() {
           </div>
           </Link>
         </div>
-        {/* </div> */}
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+     
+      <Footer/>
     </div>
   )
 }

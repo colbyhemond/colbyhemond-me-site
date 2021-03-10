@@ -1,6 +1,9 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { attributes, react as HomeContent } from '../content/home.md';
+import HomeButton from '../components/HomeButton'
+import Footer from '../components/Footer'
 
 export default function About() {
   let { title } = attributes;
@@ -10,6 +13,8 @@ export default function About() {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <HomeButton/>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -28,23 +33,16 @@ export default function About() {
           </div>
         </div> */}
         <div className={styles.content}>
-        <p>Colby Hemond is a developer currently working on contract as an ABAP Programmer with Pennsylvania State University. Colby also creates websites during his free time through his side business, Colby Hemond LLC. </p>
-        <p>Colby loves the challenge that programming brings, because there's always a problem to be solved.</p>
-        <p>Colby currently lives in New Hampshire with his beautiful wife, Emily, and their dog, Chance. He has also lived in other various parts of the United States: Connecticut, California, and Michigan. When he is not coding, Colby can be found snowboarding, mountain biking, hiking, or checking out a new brewery.</p>
+        <p>Hey! I'm Colby</p>
+        <p>I'm a developer currently working on contract as an ABAP Programmer with Pennsylvania State University. I also like to create websites during his free time through my side business, Colby Hemond LLC. </p>
+        <p>I love the challenge that programming brings, because there's always a problem to be solved.</p>
+        <p>I currently live in New Hampshire with my beautiful wife, Emily, and our dog, Chance. I hav also lived in other various parts of the United States: Connecticut, California, and Michigan. When I am not coding, I can be found snowboarding, mountain biking, hiking, or checking out a new brewery.</p>
+        <p>I don't want to settle for good enough. I want to keep pushing to be better, make better things.</p>
         </div>
     
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer/>
     </div>
   )
 }

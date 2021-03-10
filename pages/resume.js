@@ -1,7 +1,10 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { attributes, react as HomeContent } from '../content/home.md';
 import useSwr from 'swr'
+import HomeButton from '../components/HomeButton'
+import Footer from '../components/Footer'
 
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
@@ -26,6 +29,7 @@ export default function Resume(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <HomeButton/>
       <main className={styles.main}>
         <h1 className={styles.title}>
           Resume
@@ -84,20 +88,26 @@ export default function Resume(props) {
           
           </>
           )}
-          {/* <h3>Additional</h3> */}
-          {/* <p>{data.education.certifications.map(cert => <p>{cert.certification}</p>)}</p> */}
+          {/* <h3>Additional</h3>
+          <p>{data.education.certifications.map(cert => <p>{cert.certification}</p>)}</p> */}
           <h2>Projects</h2>
           <p>{
           data.projects.map(proj => 
           <>
           <h4>{proj.project}</h4>
-          <p>{proj.type}</p>
+          <p>Type: {proj.type}</p>
           {/* <p>{proj.status}</p> */}
           <p>{proj.creationDate}</p>
           <p>{proj.description}</p>
-          {}
-          {proj.URL ? <a href={proj.URL}>{proj.URL}</a> : ''}
-          {proj.gitRepository ? <a href={proj.gitRepository}>{proj.gitRepository}</a> : ''}
+          <p>Technologies: {proj.technologies.map((tech, i, arr ) => {
+            if (arr.length - 1 === i) {
+              return tech
+           } else {
+              return `${tech}, `
+           }
+          })}</p>
+          {proj.URL ? <p>View Site: <a href={proj.URL}>{proj.URL}</a></p> : ''}
+          {proj.gitRepository ? <p>Git Repo: <a href={proj.gitRepository}>{proj.gitRepository}</a></p> : ''}
           </>
           )}</p>
           
@@ -105,30 +115,7 @@ export default function Resume(props) {
     
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer/>
     </div>
   )
 }
-
-// export async function getStaticProps(context) {
-
-//   console.log(`GET STATIC PROPS`);
-
-//   const res = await fetch('http://localhost:3000/api/resume_v1/resume')
-//   // console.log(res);
-//   // const resume = await res.json()
-//   ;
-//   // console.log(resume);
-//   return {
-//     props: {}, // will be passed to the page component as props
-//   }
-// }
