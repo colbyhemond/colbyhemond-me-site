@@ -30,6 +30,14 @@
   font-size: 4rem;
 }
 
+.titleFirst {
+  font-weight: 300;
+}
+
+.titleLast {
+  font-weight: 700;
+}
+
 .title,
 .description {
   text-align: center;
@@ -122,6 +130,7 @@
   color: white;
   background-color: black;
   z-index: 999;
+  text-transform: uppercase;
 }
 
 .card:hover .cardTitle {
@@ -138,6 +147,7 @@
   color: black;
   background-color: white;
   z-index: 999;
+  text-transform: uppercase;
 }
 
 .card:hover .cardTitleDark {

@@ -28,9 +28,10 @@ html {
 
 h1, h2, h3, h4, h5, h6, nav, .btn, .icon-title {
     font-family: var(--font-primary-ch), sans-serif !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     color: var(--color-primary-ch) !important;
     padding-bottom: 1em;
+    text-transform: uppercase;
 }
 
 body, p {

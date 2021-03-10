@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Colby Hemond
+          <span className={styles.titleFirst}>COLBY</span><span className={styles.titleLast}>HEMOND</span>
         </h1>
 
         <div className={styles.grid}>

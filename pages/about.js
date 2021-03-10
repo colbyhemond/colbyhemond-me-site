@@ -21,18 +21,7 @@ export default function About() {
         <h1 className={styles.title}>
           About
         </h1>
-
-        {/* <div className={styles.grid}>
-          <div className={styles.card}>
-          <div className={styles.image}>
-            <img src="/images/headshot.png" alt="Colby Hemond"></img>
-            <span className={styles.cardTitle}>About</span>
-            </div>
-          </div>
-          <div className={styles.card}>
-          <span className={styles.cardTitleDark}>Resume</span>
-          </div>
-        </div> */}
+        
         <div className={styles.content}>
         <p>Hey! I'm Colby.</p>
         <p>I'm currently working on contract as an SAP ABAP Developer with Pennsylvania State University. However, I'm making a transition to full time web development. I enjoy both frontend and backend development; frontend fulfills my creative/design itch, whereas backend allows my brain to use its logical, structured aspects.</p>
