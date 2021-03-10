@@ -32,6 +32,14 @@ export default function Home() {
           <span className={styles.cardTitleDark}>Resume</span>
           </div>
           </Link>
+          <Link href="/blog">
+          <div className={styles.card}>
+            <span className={styles.cardTitleDark}>Blog</span>
+            <div className={styles.cardTextContainer}>
+              <div className={styles.cardText}>this is sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this spaces sample text for a sample blog post that will fill this space this is sample text for a sample blog post that will fill this space this is sample text for a sample blog post that will fill this space this is sample text for a sample blog post that will fill this space</div>
+            </div>
+          </div>
+          </Link>
         </div>
       </main>
 
