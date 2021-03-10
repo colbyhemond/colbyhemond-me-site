@@ -25,7 +25,7 @@ export default function Blog() {
         
         <div className={styles.content}>
             <p className={styles.textCenter}>Working on it! 👨🏻‍💻</p>
-            <p className={styles.textCenter}><a href="https://old.colbyhemond.me/blog">Visit the old blog here</a> ➡️</p>
+            <p className={styles.textCenter}><a href="https://colbyhemond.netlify.app/blog">Visit the old blog here</a> ➡️</p>
         </div>
     
       </main>
