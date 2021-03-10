@@ -23,7 +23,7 @@ export default function Home() {
           <div className={styles.card}>
           <div className={styles.image}>
             <div>
-            <img src="/images/headshot.png" alt="Colby Hemond"></img>
+              <img src="/images/headshot.png" alt="Colby Hemond"></img>
             </div>
             <span className={styles.cardTitle}>About</span>
             </div>

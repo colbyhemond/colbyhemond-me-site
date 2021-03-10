@@ -34,11 +34,11 @@ export default function About() {
           </div>
         </div> */}
         <div className={styles.content}>
-        <p>Hey! I'm Colby</p>
-        <p>I'm a developer currently working on contract as an ABAP Programmer with Pennsylvania State University. I also like to create websites during his free time through my side business, Colby Hemond LLC. </p>
-        <p>I love the challenge that programming brings, because there's always a problem to be solved.</p>
-        <p>I currently live in New Hampshire with my beautiful wife, Emily, and our dog, Chance. I have also lived in other various parts of the United States: Connecticut, California, and Michigan. When I am not coding, I can be found snowboarding, mountain biking, hiking, or checking out a new brewery.</p>
-        <p>I don't want to settle for good enough. I want to keep pushing to be better, make better things.</p>
+        <p>Hey! I'm Colby.</p>
+        <p>I'm currently working on contract as an SAP ABAP Developer with Pennsylvania State University. However, I'm making a transition to full time web development. I enjoy both frontend and backend development; frontend fulfills my creative/design itch, whereas backend allows my brain to use its logical, structured aspects.</p>
+        <p>I love the challenge that programming brings, because there's always a problem to be solved and you get to use your creativity to solve that problem they way that you like.</p>
+        <p>I live in New Hampshire with my beautiful wife, Emily, and our dog, Chance. I have also lived in other various parts of the United States: Connecticut, California, and Michigan. When I am not coding, I can be found snowboarding, mountain biking, hiking, or checking out a new brewery.</p>
+        <p>I don't like to be complacent. I like to constantly be learning and growing. I always want to keep pushing to be better, and do better.</p>
         </div>
     
       </main>
