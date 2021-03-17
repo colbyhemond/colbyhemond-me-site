@@ -1,16 +1,16 @@
 import Link from "next/link";
 import styles from "./button.module.css";
 
-const HomeButton = props => (
+const GitButton = props => (
     <div>
-    <Link href="/">
+    <Link href="https://github.com/colbyhemond">
     <a className={styles.button}>
       <div>
-        <img src="../icons/house.svg"></img>
+        <img src="/icons/github.svg"></img>
       </div>
     </a>
     </Link>
   </div>
 );
 
-export default HomeButton;
+export default GitButton;

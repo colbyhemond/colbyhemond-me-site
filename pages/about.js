@@ -3,25 +3,34 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { attributes, react as HomeContent } from '../content/home.md';
 import HomeButton from '../components/HomeButton'
+import GitButton from '../components/GitButton'
+import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
 
 export default function About() {
   let { title } = attributes;
   return (
-    <div className={styles.container}>
-      <Head>
+    <>
+    <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
+    {/* <div className={styles.navRow}>
       <HomeButton/>
+      <GitButton/>
+      </div> */}
+      <NavGroup home />
+      
+    <div className={styles.container}>
+      
 
       <main className={styles.main}>
         <h1 className={styles.title}>
           About
         </h1>
-        
+
         <div className={styles.content}>
         <p>Hey! I'm Colby.</p>
         <p>I'm currently working on contract as an SAP ABAP Developer with Pennsylvania State University. However, I'm making a transition to full time web development. I enjoy both frontend and backend development; frontend fulfills my creative/design itch, whereas backend allows my brain to use its logical, structured aspects.</p>
@@ -34,5 +43,6 @@ export default function About() {
 
       <Footer/>
     </div>
+    </>
   )
 }

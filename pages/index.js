@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { attributes, react as HomeContent } from '../content/home.md';
+import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <NavGroup />
 
       <main className={styles.main}>
         <h1 className={styles.title}>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { attributes, react as HomeContent } from '../content/home.md';
 import useSwr from 'swr'
-import HomeButton from '../components/HomeButton'
+import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
 
 
@@ -29,7 +29,8 @@ export default function Resume(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HomeButton/>
+      <NavGroup home />
+      
       <main className={styles.main}>
         <h1 className={styles.title}>
           Resume
