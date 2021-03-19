@@ -1,14 +1,17 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import { attributes, react as HomeContent } from '../content/home.md';
+import stylesHome from '../styles/Home.module.css'
+import stylesBlog from '../styles/Blog.module.css'
+import { attributes, react as HomeContent } from '../content/home.md'
 import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
+import { getConfig, getAllPosts } from './api/index'
 
-export default function Blog() {
+export default function Blog(props) {
   let { title } = attributes;
+
   return (
-    <div className={styles.container}>
+    <div className={stylesHome.container}>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,21 +19,40 @@ export default function Blog() {
       </Head>
 
       <NavGroup home />
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <h1 className={stylesHome.title}>
           Blog
         </h1>
-
+      <main className={stylesHome.main}>
         
-        <div className={styles.content}>
-            <p className={styles.textCenter}>Working on it! 👨🏻‍💻</p>
-            <p className={styles.textCenter}><a href="https://colbyhemond.netlify.app/blog">Visit the old blog here</a> ➡️</p>
+      <div className={stylesHome.content}>
+        {props.posts.map(function(post, idx) {
+          return (
+            <div key={idx} className={stylesBlog.postSummary}>
+              <Link href={'/posts/'+post.slug}>
+                <a className={stylesBlog.linkTitle}>{post.title}</a>
+              </Link>
+          <p><small>{post.date}</small></p>
+              <p>{post.summary}</p>
+            </div>
+          )
+        })}
+ 
         </div>
-    
       </main>
+      
 
       <Footer/>
     </div>
   )
+}
+
+
+export async function getStaticProps() {
+  const allPosts = await getAllPosts()
+
+  return {
+    props: {
+      posts: allPosts,
+    }
+  }
 }
