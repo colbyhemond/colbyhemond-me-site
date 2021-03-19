@@ -177,6 +177,11 @@
   display: flex;
 }
 
+.divider {
+  background-color: orange;
+  height: 5px;
+}
+
 
 @media (max-width: 600px) {
   .title {

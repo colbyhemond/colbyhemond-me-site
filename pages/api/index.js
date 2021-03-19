@@ -29,7 +29,7 @@ export async function getAllPosts() {
   }
 
   const formattedPosts = posts.sort((a,b) => {
-    new Date(b.date) - new Date(a.date)
+    return new Date(b.date) - new Date(a.date)
   }).map(post=> ({
     ...post, date: new Date(post.date).toDateString()
   }))
@@ -49,5 +49,13 @@ export async function getPostBySlug(slug) {
         date: new Date(meta.date).toDateString(),
         content: content
     }
+
+}
+
+export async function getLastestPostSummary() {
+
+  const allPosts = await getAllPosts()
+
+  return allPosts[0].summary;
 
 }

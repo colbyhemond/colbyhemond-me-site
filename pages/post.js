@@ -19,12 +19,13 @@ export default function PostLayout(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
-      <NavGroup home />
+      <NavGroup home back />
       <main className={stylesHome.main}>
         <div className={stylesHome.content}>
           <article className={stylesBlog.article}>
             <h1>{props.title}</h1>
             <span className={stylesBlog.date}>{props.date}</span>
+            <div className={stylesHome.divider}></div>
             <ReactMarkdown plugins={[gfm]} children={props.content}/>
           </article>
         </div>

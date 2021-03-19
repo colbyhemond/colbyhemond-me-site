@@ -4,8 +4,9 @@ import styles from '../styles/Home.module.css'
 import { attributes, react as HomeContent } from '../content/home.md';
 import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
+import { getLastestPostSummary } from './api';
 
-export default function Home() {
+export default function Home(props) {
   let { title } = attributes;
   return (
     <div className={styles.container}>
@@ -41,7 +42,7 @@ export default function Home() {
           <div className={styles.card}>
             <span className={styles.cardTitleDark}>Blog</span>
             <div className={styles.cardTextContainer}>
-              <div className={styles.cardText}>Once I get a blog hooked up, this will display the summary of the most recent post.</div>
+              <div className={styles.cardText}>{props.summary}</div>
             </div>
           </div>
           </Link>
@@ -50,4 +51,13 @@ export default function Home() {
       <Footer/>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const summary = await getLastestPostSummary()
+  return {
+    props: {
+      summary: summary,
+    }
+  }
 }
