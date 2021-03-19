@@ -1,11 +1,9 @@
-// import DefaultLayout from '@layouts/default'
 import Head from 'next/head'
-import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import stylesHome from '../styles/Home.module.css'
 import stylesBlog from '../styles/Blog.module.css'
-import { attributes, react as HomeContent } from '../content/home.md'
+import { attributes } from '../content/home.md'
 import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
 

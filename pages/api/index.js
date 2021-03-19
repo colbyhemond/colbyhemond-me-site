@@ -4,9 +4,8 @@ import fs from 'fs'
 function readFile(slug) {
 
     const data = fs.readFileSync(`./pages/posts/${slug}.md`, 'utf8')
-
+    
     return fm(data)
-
 }
 
 export async function getAllPosts() {

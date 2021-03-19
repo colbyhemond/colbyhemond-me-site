@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import stylesHome from '../styles/Home.module.css'
 import stylesBlog from '../styles/Blog.module.css'
-import { attributes, react as HomeContent } from '../content/home.md'
+import { attributes } from '../content/home.md'
 import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
-import { getConfig, getAllPosts } from './api/index'
+import { getAllPosts } from './api/index'
 
 export default function Blog(props) {
   let { title } = attributes;
