@@ -165,6 +165,7 @@
 .content {
   width: 100%;
   max-width: 700px;
+  overflow-wrap: normal;
 }
 
 
@@ -174,6 +175,11 @@
 
 .navRow {
   display: flex;
+}
+
+.divider {
+  background-color: orange;
+  height: 5px;
 }
 
 
