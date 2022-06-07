@@ -30,29 +30,29 @@ export default function Contact() {
         <h1 className={styles.title}>
           Contact
         </h1>
-
+      <Link href='/success'>Link</Link>
         <div className={styles.content}>
-            <form name='contact' method='POST' data-netlify="true">
-                <div className="hidden" hidden>
+            <form name='contact' method='POST' data-netlify="true" action='/success'>
+                <p className="hidden" hidden>
                     <label>
                     Don’t fill this out if you’re human: <input name="bot-field" />
                     </label>
-                </div>
-                <div>
+                </p>
+                <p>
                     <label htmlFor='name'>Name</label>
-                    <input name='name' id='name' type='text'></input>
-                </div>
-                <div>
+                    <input name='name' id='name' type='text' required></input>
+                </p>
+                <p>
                     <label htmlFor='email'>Emaiil</label>
-                    <input name='email' id='email' type='email'></input>
-                </div>
-                <div>
+                    <input name='email' id='email' type='email' required></input>
+                </p>
+                <p>
                     <label htmlFor='message'>Message</label>
-                    <textarea rows='5' name='message' id='message' type='text'></textarea>
-                </div>
-                <div className={styles.centerButton}>
-                    <button className={styles.button} type='submit'>Send It!</button>
-                </div>
+                    <textarea rows='5' name='message' id='message' required></textarea>
+                </p>
+                <p className={styles.centerButton}>
+                    <input className={styles.button} type='submit' value='Send It!'></input>
+                </p>
             </form>
         </div>
     
