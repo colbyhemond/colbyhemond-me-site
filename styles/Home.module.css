@@ -89,6 +89,7 @@
 .card:focus,
 .card:active {
   border-color: orange;
+  cursor: pointer;
 }
 
 .card h3 {
@@ -135,6 +136,7 @@
 
 .card:hover .cardTitle {
   color: orange;
+  cursor: pointer;
 }
 
 .card .cardTitleDark {
@@ -152,6 +154,7 @@
 
 .card:hover .cardTitleDark {
   color: orange;
+  cursor: pointer;
 }
 
 .cardText {
@@ -160,6 +163,7 @@
 
 .card:hover .cardText {
   color: black;
+  cursor: pointer;
 }
 
 .content {
@@ -203,4 +207,34 @@
     margin: 5.5rem 1rem;
     font-size: 1.5rem; 
   }
+}
+
+.button {
+  background-color: white;
+  border: 3px solid black;
+  padding: 5px 10px;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px lightgrey;
+  border-color: orange;
+  cursor: pointer;
+}
+
+.centerButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contactlink {
+  text-decoration: underline;
+  color: black;
+}
+
+.contactlink:hover {
+  color: orange;
+  cursor: pointer;
 }

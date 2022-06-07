@@ -41,3 +41,8 @@ body, p {
 body a, p a {
     text-decoration: underline;
 }
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0px;
+}

@@ -20,6 +20,9 @@ export default function Home() {
         <h1 className={styles.title}>
           <span className={styles.titleFirst}>COLBY</span><span className={styles.titleLast}>HEMOND</span>
         </h1>
+        <Link href='/contact'>
+          <div className={styles.contactlink}>Send me a message ➜</div>
+        </Link>
 
         <div className={styles.grid}>
         <Link href="/about">
