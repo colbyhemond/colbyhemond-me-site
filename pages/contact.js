@@ -32,7 +32,7 @@ export default function Contact() {
         </h1>
 
         <div className={styles.content}>
-            <form name='contact' method='POST' data-netlify="true" action="/success">
+            <form name='contact' method='POST' data-netlify="true">
                 <div className="hidden" hidden>
                     <label>
                     Don’t fill this out if you’re human: <input name="bot-field" />
