@@ -33,22 +33,22 @@ export default function Contact() {
 
         <div className={styles.content}>
             <form name='contact' method='POST' data-netlify="true" action="/success">
-                <div class="hidden" hidden>
+                <div className="hidden" hidden>
                     <label>
                     Don’t fill this out if you’re human: <input name="bot-field" />
                     </label>
                 </div>
                 <div>
-                    <label id='name'>Name</label>
-                    <input name='name' for='name' type='text'></input>
+                    <label htmlFor='name'>Name</label>
+                    <input name='name' id='name' type='text'></input>
                 </div>
                 <div>
-                    <label id='email'>Emaiil</label>
-                    <input name='email' for='email' type='email'></input>
+                    <label htmlFor='email'>Emaiil</label>
+                    <input name='email' id='email' type='email'></input>
                 </div>
                 <div>
-                    <label id='message'>Message</label>
-                    <textarea rows='5' name='message' for='message' type='text'></textarea>
+                    <label htmlFor='message'>Message</label>
+                    <textarea rows='5' name='message' id='message' type='text'></textarea>
                 </div>
                 <div className={styles.centerButton}>
                     <button className={styles.button} type='submit'>Send It!</button>
