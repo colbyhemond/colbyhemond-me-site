@@ -7,7 +7,7 @@ import GitButton from '../components/GitButton'
 import NavGroup from '../components/NavGroup'
 import Footer from '../components/Footer'
 
-export default function About() {
+export default function Contact() {
   let { title } = attributes;
   return (
     <>
@@ -32,7 +32,7 @@ export default function About() {
         </h1>
 
         <div className={styles.content}>
-            <form name='contact' method='POST' data-netlify="true">
+            <form name='contact' method='POST' data-netlify="true" action="/success">
                 <div class="hidden" hidden>
                     <label>
                     Don’t fill this out if you’re human: <input name="bot-field" />
@@ -51,7 +51,7 @@ export default function About() {
                     <textarea rows='5' name='message' for='message' type='text'></textarea>
                 </div>
                 <div className={styles.centerButton}>
-                    <button className={styles.button} name='submit' type='submit'>Send It!</button>
+                    <button className={styles.button} type='submit'>Send It!</button>
                 </div>
             </form>
         </div>
