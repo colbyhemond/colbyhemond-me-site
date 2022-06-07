@@ -7,7 +7,7 @@ summary: Implementing APIs doesn't have to be scary. Especially when you only
   started with might be the most challenging. Luckily there are some simple
   options out there. Like the Chuck Norris joke API , which ...
 ---
-Implementing APIs doesn't have to be scary. Especially when you only GET data from them and not POST, PUT, or PATCH. Finding the right API to get started with might be the most challenging. Luckily there are some simple options out there. Like the [Chuck Norris joke API](http://api.cucknorris.io), which I will be showing how I was able to quickly implement it.
+Implementing APIs doesn't have to be scary. Especially when you only GET data from them and not POST, PUT, or PATCH. Finding the right API to get started with might be the most challenging. Luckily there are some simple options out there. Like the [Chuck Norris joke API](https://api.chucknorris.io/), which I will be showing how I was able to quickly implement it.
 
 There will be no frameworks or even linking to external script pages in this walk through, everything can be done right on your index.html document. All you need to know are HTML, CSS, and some fundamentals of JavaScript.
 
@@ -22,11 +22,11 @@ I will be going over the following steps to add the API:
 
 The first thing to do when beginning to implement an API is to review the documentation to gain an understanding of how it should be implemented and what functionalities it offers. It's common for APIs to require a token or other authorization techniques in order to make calls to the API. The one that we will be using is completely free and read only, so there is no token or authorization involved which helps simplify what we have to do.
 
-Head over to <https://api.chucknorris.io> to review their documentation. (I have also provided screen shots so that it is not required to navigate to website)
+Head over to https://api.chucknorris.io/ to review their documentation. (I have also provided screen shots so that it is not required to navigate to website)
 
 At the very start of the documentation they show an example of how to call the API in its most simplest form and an example of the response that will be returned if the call is successful.
 
-![undefined](https://cdn.buttercms.com/f4kEknX7QCq350qtwA8U)
+
 
 You can also test out this call quickly by pasting the URL in your address bar. Give it a try: `https://api.chucknorris.io/jokes/random`
 
@@ -34,7 +34,7 @@ There's no need to know the complete functionality of the API at this point, so 
 
 ## Implementing the simplest version of the API
 
-In order to get the API hooked up we need to write a little HTML. In addition to your standard boiler plate tags like <!DOCTYPE>, <html>, <body>... all you need to add is an element where you want to place your API output. In our case, we will only be using the "value" from the API response so I added the following HTML:
+In order to get the API hooked up we need to write a little HTML. In addition to your standard boiler plate tags like `<!DOCTYPE>`, `<html>`, `<body>`... all you need to add is an element where you want to place your API output. In our case, we will only be using the "value" from the API response so I added the following HTML:
 
 `<div class="quote-box">`\
 `<h3 id="quote"></h3>`\
@@ -46,12 +46,6 @@ Now that we have a place to put the data from our API call, let's write some Jav
 
 `let quote = document.querySelector('#quote');`
 
-`fetch('https://api.chucknorris.io/jokes/random')`\
-`.then(response => response.json())`\
-`.then(data => {`\
-`quote.innerHTML = data.value`\
-`})`\
-`.catch()`
 
 The above code first gets the `<h3 id="quote"></h3>` element using `querySelector()`
 
@@ -79,7 +73,7 @@ Here is the new Javascript:
 
 `let quote = document.querySelector('#quote');`
 
-`fetch('https://api.chucknorris.io/jokes/random')`
+
 
 `.then(response => response.json())`
 
@@ -107,11 +101,10 @@ Let's kick things up a notch here. We can already get a random joke by calling a
 
 Heading back over to the API documentation we see that they offer an API call that we can control which category the joke comes from:
 
-![chucknorrisapi_category.png](https://cdn.buttercms.com/PYxncOMHQve6UXRmnhO0)
+
 
 But how do we know what categories are available? Well, they supplied us with a solution for that as well:
 
-![chucknorrisapi_categories.png](https://cdn.buttercms.com/VL855AbR7uPYjxY3SYDC)
 
 With these two pieces, we will be able to add a drop down list next to our button, fill the dropdown values with all of the categories, then call the API with the specific category that is selected. Here is the HTML for the dropdown list:
 
@@ -122,36 +115,42 @@ And our new JavaScript:
 
 
 ```javascript
-// a function that sets the quote text to generic wording so that the user knows something is happening when the page is loading and after they click the button
+// a function that sets the quote text to generic wording so that the user knows 
+// something is happening when the page is loading and after they click the button
 const loadingText = function () {
 let quote = document.querySelector('#quote');
 quote.innerHTML = 'Wait for it...';
 }
-
+```
+```javascript
 // a function to set the quote text from the API response
 const setQuote = function (text) {
 let quote = document.querySelector('#quote');
 quote.innerHTML = text;
 }
-
-// a function to set the values of the categories drop down from the categories returned from the API
+```
+```javascript
+// a function to set the values of the categories drop down from the categories 
+//returned from the API
 const setChuckCategories = function (categoriesArray) {
 let categoriesSelect = document.querySelector('#chuck-categories');
 categoriesSelect.innerHTML = categoriesArray.map(category => {
 `<option value='${category}'>${category}</option>`);
 }
 }
-
+```
+```javascript
 // a function that returns the category that the user selected
 const getSelectedChuckCategory = function () {
 let category = document.querySelector('#chuck-categories');
-if (category.options[category.selectedIndex] !== undefined) {
-return category.options[category.selectedIndex].value;
-} else {
-return 'all'
+  if (category.options[category.selectedIndex] !== undefined) {
+    return category.options[category.selectedIndex].value;
+  } else {
+    return 'all'
+  }
 }
-}
-
+```
+```javascript
 // a function to get a new Chuck Norris joke
 const getChuck = function (category) {
     loadingText();
@@ -203,5 +202,3 @@ The most important pieces for implementing the categories is `getChuckCategories
 `getChuck()`we have modified to pass in a category as a parameter, we call the`loadingText()` function so the use knows something is happening, we get the selected category, then determine if we should call the initial API call for all categories, or call the category specific API call
 
 After adding this, you should be all set to be able to have your user select the specific category that they want! See that wasn't so bad after all!
-
-If you have any comments or questions feel free to contact me through my contact page, email at contact@colbyhemond.me, or find me on twitter @ColbyHemond
