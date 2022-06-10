@@ -2,7 +2,7 @@
 
 const resume = {
     summary: {
-        description: 'Colby has over 6 years experience working as a software developer. He has worked on multiple enterprise wide software implementation projects that integrate with many other systems. He started out as an SAP ABAP developer focusing on back-end development, and is striving to become a full stack web developer with a focus on React and Node.js. He has worked remotely or in remote offices since 2016, and has worked from home since September 2019. Because of this he has become comfortable with communicating asynchronously and maintaining contact with teammates and managers to stay in the loop.'
+        description: 'Colby has over 8 years experience working as a software developer. He has worked on multiple enterprise wide software implementation projects that integrate with many other systems. He started out as an SAP ABAP developer focusing on back-end development, and is striving to become a full stack web developer with a focus on React and Node.js. He has worked remotely in some capacity since 2016, because of this he has become comfortable with communicating asynchronously and maintaining contact with teammates and managers to stay in the loop.'
     },
     experience: [
             {
@@ -81,8 +81,8 @@ const resume = {
                 id: 7,
                 company: 'Pennsylvania Statue University',
                 dateStart: '2019-09-01T12:00:00.000Z',
-                dateEnd: null,
-                jobTitle: 'Software Developer',
+                dateEnd: '2021-07-01T12:00:00.000Z',
+                jobTitle: 'Integration Developer',
                 duties: [
                     { id: 1, duty: 'Maintain existing integration points (OData REST and batch files) so that connecting systems have reliable access points to send and receive data'},
                     { id: 2, duty: 'Assist in reports development and bug fixing so that the development team can keep up on backlog'},
@@ -102,6 +102,19 @@ const resume = {
                     { id: 3, duty: 'Provide the best customer service possible so that I can build strong relationships and maintain a good reputation'}
                 ],
                 skills: ["Sales", "Accounting", "Marketing", "Project Management", "Customer Service/Support", "Remote Communication"]
+            },
+            {
+                id: 9,
+                company: 'TekSystems - Auto-Owners Insurance',
+                dateStart: '2021-07-01T12:00:00.000Z',
+                dateEnd: null,
+                jobTitle: 'SAP ABAP Consultant',
+                duties: [
+                    { id: 1, duty: 'Maintain existing SOAP web service integrations and documentation so that the front-end development team can implement them exposing functionality to the web pages'},
+                    { id: 2, duty: 'Communicate with teams from integrating systems to ensure data consistency, integrations expectations, and support'},
+                    { id: 3, duty: 'Teach and Lead teammates in various small projects from a remote office using phone, WebEx, and Slack'}
+                ],
+                skills: ["SAP Software", "ABAP Programming Language", "SOAP Web Services", "Object Oriented Programming", "Agile Project Management Methodologies", "Test Driven Development", "Pair Programming", "Design Patterns"]
             }
     ],
     education: {

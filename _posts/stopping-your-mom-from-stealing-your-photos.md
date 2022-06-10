@@ -1,5 +1,6 @@
 ---
 title: Stopping your mom from stealing your photos
+status: published
 date: '2020-07-04T20:53:39.258Z'
 summary: A couple ways you can help prevent your mom and family members from
   stealing your photos.

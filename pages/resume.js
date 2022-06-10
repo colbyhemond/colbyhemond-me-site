@@ -4,6 +4,9 @@ import {getResume} from './api/resume'
 
 
 export default function Resume({data}) {
+  const sortDescending = () => {
+
+  }
 
   return (
     <>
@@ -16,8 +19,7 @@ export default function Resume({data}) {
           Résumé
         </h1>
       <div className='prose'>
-        
-        
+                
           <h2>Summary</h2>
           <p>{data.summary.description}</p>
           <h2>Experience</h2>
@@ -98,8 +100,22 @@ export default function Resume({data}) {
   )
 }
 
+const sortDesc = (dateA, dateB) => {
+  if (dateA < dateB) {
+    return 1
+  } else {
+    return -1
+  }
+}
+
 export async function getStaticProps() {
   const resume = getResume()
+
+  resume.experience.sort((jobA, jobB) => sortDesc(jobA.dateStart, jobB.dateStart))
+  resume.education.schools.sort((schoolA, schoolB) => sortDesc(schoolA.dateStart, schoolB.dateStart))
+  resume.projects.sort((projA, projB) => sortDesc(projA.date, projB.date))
+  
+
   return {
     props: { 
       data: resume

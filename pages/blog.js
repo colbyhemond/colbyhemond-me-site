@@ -30,7 +30,7 @@ export default function Blog({allPosts}) {
                 </a>
               </Link>
               <p><small>{new Date(post.date).toDateString()}</small></p>
-              <p className='text-center max-w-[600px]'>{post.content.slice(0,100)}...</p>
+              <p className='text-center max-w-[600px]'>{post.summary.slice(0,100)}...</p>
             </div>
           )
         })}
@@ -48,6 +48,7 @@ export async function getStaticProps() {
     'author',
     'coverImage',
     'content',
+    'summary'
   ])
 
   return {

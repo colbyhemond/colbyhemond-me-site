@@ -33,3 +33,7 @@
 .markdown p code {
   @apply inline bg-gray-200 rounded p-1;
 }
+
+.markdown li {
+  @apply list-disc list-inside;
+}

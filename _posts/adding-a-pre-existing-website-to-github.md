@@ -1,5 +1,6 @@
 ---
 title: Adding a Pre-Existing Website to GitHub
+status: published
 date: '2020-07-15T21:00:58.206Z'
 summary: If you are like me, you don't use GitHub nearly as much as you should.
   Because of that, you always seem to forget how simple the process of the Git
