@@ -1,5 +1,6 @@
 ---
 title: How a headless CMS saved my life
+status: published
 date: '2020-04-27T20:52:08.587Z'
 summary: My journey in creating my personal website. From basic HTML and CSS to
   dabbling with full CMS's, to finding the right balance with a Headless CMS.

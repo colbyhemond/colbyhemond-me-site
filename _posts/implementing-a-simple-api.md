@@ -1,5 +1,6 @@
 ---
 title: Implementing a simple API
+status: published
 date: '2020-08-18T21:03:03.008Z'
 summary: Implementing APIs doesn't have to be scary. Especially when you only
   GET data from them and not POST, PUT, or PATCH. Finding the right API to get
