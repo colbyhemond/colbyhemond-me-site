@@ -1,11 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 import NavGroup from '../components/NavGroup'
-import Footer from '../components/Footer'
 
 export default function Success() {
-  let { title } = attributes;
   return (
     <>
     <Head>
@@ -14,24 +11,17 @@ export default function Success() {
       </Head>
 
       <NavGroup home />
-      
-    <div className={styles.container}>
-      
-
-      <main className={styles.main}>
-
-        <div className={styles.textcenter}>
+    
+      <div className='w-full h-[90vh] flex flex-col justify-center items-center'>
+        <div className='text-center'>
            Thanks for your message! I&apos;ll be in contact soon! <br/>
            
         </div>
-        <div>
+        <div className='underline'>
             <Link href='/'>Return to Home Page</Link>
         </div>
-    
-      </main>
+      </div>
 
-      <Footer/>
-    </div>
     </>
   )
 }

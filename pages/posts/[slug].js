@@ -40,8 +40,7 @@ export async function getStaticProps({ params }) {
     'coverImage',
   ])
 
-  let content = await markdownToHtml(post.content || '')
-  content = content.replaceAll('&nbsp', ' ')
+  const content = await markdownToHtml(post.content || '')
 
   return {
     props: {
