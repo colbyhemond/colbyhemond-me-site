@@ -21,6 +21,7 @@ export default function Blog({allPosts}) {
         
       <div className='w-full'>
         {allPosts.map(function(post, idx) {
+
           return (
             <div key={idx} className='flex flex-col items-center my-10'>
               <Link href={'/posts/'+post.slug}>
