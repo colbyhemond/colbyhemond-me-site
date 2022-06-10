@@ -1,20 +1,26 @@
 .markdown {
     @apply text-sm leading-relaxed break-normal;
 }
+
+@media (min-width: 768px) { 
+  .markdown {
+    font-size: 12pt;
+  }
+}
   
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-6;
+  @apply my-4;
 }
 
 .markdown h2 {
-  @apply text-xl mt-12 mb-4 leading-snug;
+  @apply text-2xl mt-10 mb-2 leading-snug font-semibold;
 }
 
 .markdown h3 {
-  @apply text-lg mt-8 mb-4 leading-snug;
+  @apply text-lg mt-6 mb-2 leading-snug font-normal;
 }
 
 .markdown pre {
