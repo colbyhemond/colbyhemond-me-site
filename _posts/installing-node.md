@@ -3,7 +3,7 @@ title: Installing Node.js - The Best Way
 status: published
 date: '2022-06-10T12:00:00.000Z'
 tags: [nodejs, development]
-summary: How to install Node.js on your computer to make things less annoying in the future.
+summary: How to install Node.js using node version manager. 
 ---
 The best way to install node is using a version manager. Specifically `nvm` (node version manager).
 
@@ -14,7 +14,7 @@ What's included in this article:
 - Changing versions
 - Why is installing node using `nvm` the best way?
 
-## Checking your versions
+## Checking versions
 In order to check your versions you must have a terminal/command prompt/command line window open. You can accomplish this by searching for the application on your computer. Or if you have a code editor installed, you usually can open one within the editor.
 
 ### Node Version Manager
