@@ -1,48 +1,13 @@
-/*      *****           *****           *****               *****           *****           *****        */
-/* This is the only custom file an !important tag will be used in order to override any boostrap styling */
-/*      *****           *****           *****               *****           *****           *****        */
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway&display=swap');
 
-:root {
-    --ch-button: #ffa500;
-    --ch-button-hover: #fabc4a;
-    --black-ch: #333;
-    --white-ch: #fff;
-    --teal-ch: #005a57;
-    --teal-faded-ch: #005a5760;
-    --yellow-faded-ch: #ffc10760;
-    --green-ch: #8f9c5c;
-    --color-primary-ch: var(--black-ch);
-    --color-secondary-ch: var(--white-ch);
-    --font-primary-ch: 'Montserrat', sans-serif !important;
-    --font-secondary-ch: 'Raleway', sans-serif !important;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html {
-    background-color: var(--white-ch);
-    /* overflow-x: hidden !important; */
-    font-family: var(--font-secondary-ch), sans-serif !important;
-}
-
-h1, h2, h3, h4, h5, h6, nav, .btn, .icon-title {
-    font-family: var(--font-primary-ch), sans-serif !important;
-    font-weight: 700 !important;
-    color: var(--color-primary-ch) !important;
-    padding-bottom: 1em;
-    text-transform: uppercase;
-}
-
-body, p {
-    font-family: var(--font-secondary) !important;
-}
-
-body a, p a {
-    text-decoration: underline;
-}
-
-input, textarea {
-    width: 100%;
-    margin: 10px 0px;
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #333;
+    }
 }

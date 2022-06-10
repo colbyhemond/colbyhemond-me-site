@@ -1,58 +1,56 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import stylesHome from '../styles/Home.module.css'
-import stylesBlog from '../styles/Blog.module.css'
-import { attributes } from '../content/home.md'
 import NavGroup from '../components/NavGroup'
-import Footer from '../components/Footer'
 import { getAllPosts } from './api/index'
 
-export default function Blog(props) {
-  let { title } = attributes;
+export default function Blog({allPosts}) {
+  const heroPost = allPosts[0]
+  const morePosts = allPosts.slice(1)
 
   return (
-    <div className={stylesHome.container}>
+    <>
       <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <title>Blog</title>
       </Head>
 
       <NavGroup home />
-      <h1 className={stylesHome.title}>
-          Blog
-        </h1>
-      <main className={stylesHome.main}>
+
+      <h1 className='text-5xl mt-28 mb-10'>
+        Blog
+      </h1>
         
-      <div className={stylesHome.content}>
-        {props.posts.map(function(post, idx) {
+      <div className='w-full'>
+        {allPosts.map(function(post, idx) {
           return (
-            <div key={idx} className={stylesBlog.postSummary}>
+            <div key={idx} className='flex flex-col items-center my-10'>
               <Link href={'/posts/'+post.slug}>
-                <a className={stylesBlog.linkTitle}>{post.title}</a>
+                <a className='text-3xl uppercase font-bold text-gray-600 text-center 
+                              hover:text-orange-300 max-w-[600px]'>
+                  {post.title}
+                </a>
               </Link>
-          <p><small>{post.date}</small></p>
-              <p>{post.summary}</p>
+              <p><small>{new Date(post.date).toDateString()}</small></p>
+              <p className='text-center max-w-[600px]'>{post.content.slice(0,100)}...</p>
             </div>
           )
         })}
  
         </div>
-      </main>
-      
-
-      <Footer/>
-    </div>
+    </>
   )
 }
 
-
 export async function getStaticProps() {
-  const allPosts = await getAllPosts()
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'content',
+  ])
 
   return {
-    props: {
-      posts: allPosts,
-    }
+    props: { allPosts },
   }
 }

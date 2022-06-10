@@ -1,7 +1,6 @@
 ---
-slug: Implementing-a-simple-API
 title: Implementing a simple API
-date: 2020-08-18T21:03:03.008Z
+date: '2020-08-18T21:03:03.008Z'
 summary: Implementing APIs doesn't have to be scary. Especially when you only
   GET data from them and not POST, PUT, or PATCH. Finding the right API to get
   started with might be the most challenging. Luckily there are some simple
@@ -28,7 +27,9 @@ At the very start of the documentation they show an example of how to call the A
 
 
 
-You can also test out this call quickly by pasting the URL in your address bar. Give it a try: `https://api.chucknorris.io/jokes/random`
+You can also test out this call quickly by pasting the URL in your address bar. Give it a try:
+
+<https://api.chucknorris.io/jokes/random>
 
 There's no need to know the complete functionality of the API at this point, so we can move along to the next step in the process, implementing the simplest version of the API.
 
@@ -36,16 +37,19 @@ There's no need to know the complete functionality of the API at this point, so 
 
 In order to get the API hooked up we need to write a little HTML. In addition to your standard boiler plate tags like `<!DOCTYPE>`, `<html>`, `<body>`... all you need to add is an element where you want to place your API output. In our case, we will only be using the "value" from the API response so I added the following HTML:
 
-`<div class="quote-box">`\
-`<h3 id="quote"></h3>`\
-`</div>`
+```html
+<div class="quote-box">
+  <h3 id="quote"></h3>
+</div>
+```
 
 We will place the value from the API response in `<h3 id="quote"></h3>` and then `<div class="quote-box">...</div>` just acts as a container for styling purposes.
 
 Now that we have a place to put the data from our API call, let's write some JavaScript to actually call the API within our webpage and connect the response to our HTML.
 
-`let quote = document.querySelector('#quote');`
-
+```javascript
+let quote = document.querySelector('#quote')
+```
 
 The above code first gets the `<h3 id="quote"></h3>` element using `querySelector()`
 
@@ -69,25 +73,20 @@ Now let's write some JavaScript to hook up our API call to the button. All we wi
 
 Here is the new Javascript:
 
-`const getChuck = function () {`
-
-`let quote = document.querySelector('#quote');`
 
 
+```javascript
+const getChuck = function () {
+let quote = document.querySelector('#quote');
+  .then(response => response.json())
+  .then(data => {
+    quote.innerHTML = data.value
+  })
+  .catch()
+}
 
-`.then(response => response.json())`
-
-`.then(data => {`
-
-`quote.innerHTML = data.value`
-
-`})`
-
-`.catch()`
-
-`}`
-
-`getChuck();`
+getChuck();
+```
 
 We can see our original code is now just wrapped with `const getChuck = function () { ... }` then we call the function at the very end of our script so that a joke is loaded during the initial page load.
 
@@ -191,7 +190,11 @@ const getChuckCategories = function () {
 
 `getChuckCategories();`
 
-The most important pieces for implementing the categories is `getChuckCategories()`, `setChuckCategories()`, `getSelectedChuckCategory()`, and `getChuck()`.
+The most important pieces for implementing the categories is: 
+- `getChuckCategories()`
+- `setChuckCategories()`
+- `getSelectedChuckCategory()`
+- `getChuck()`
 
 `getChuckCategories()` calls the API to return an array of all the possible categories we can use. Also notice the use of `unshift()` in order to add a default 'all' value to the beginning of the array to allow us to call the original API call we set up.
 

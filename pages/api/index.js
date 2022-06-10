@@ -1,60 +1,50 @@
-import fm from 'front-matter'
 import fs from 'fs'
+import { join } from 'path'
+import matter from 'gray-matter'
 
-function readFile(slug) {
+const postsDirectory = join(process.cwd(), '_posts')
 
-    const data = fs.readFileSync(`./pages/posts/${slug}.md`, 'utf8')
-    
-    return fm(data)
+export function getPostSlugs() {
+  return fs.readdirSync(postsDirectory)
 }
 
-export async function getAllPosts() {
+export function getPostBySlug(slug, fields = []) {
+  const realSlug = slug.replace(/\.md$/, '')
+  const fullPath = join(postsDirectory, `${realSlug}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
 
-  const context = require.context('../posts', false, /\.md$/)
-  const posts = []
+  const items = {}
 
-  for(const key of context.keys()){
-
-    const post = key.slice(2);
-    const content = await import(`../posts/${post}`);
-    const meta = content.default.attributes
-
-    posts.push({
-      slug: post.replace('.md',''),
-      title: meta.title,
-      summary: meta.summary,
-      date: meta.date
-    })
-  }
-
-  const formattedPosts = posts.sort((a,b) => {
-    return new Date(b.date) - new Date(a.date)
-  }).map(post=> ({
-    ...post, date: new Date(post.date).toDateString()
-  }))
-
-  return formattedPosts;
-
-}
-
-export async function getPostBySlug(slug) {
-
-    const data = readFile(slug)
-    const meta = data.attributes
-    const content = data.body
-
-    return {
-        title: meta.title, 
-        date: new Date(meta.date).toDateString(),
-        content: content
+  // Ensure only the minimal needed data is exposed
+  fields.forEach((field) => {
+    if (field === 'slug') {
+      items[field] = realSlug
+    }
+    if (field === 'content') {
+      items[field] = content
     }
 
+    if (typeof data[field] !== 'undefined') {
+      items[field] = data[field]
+    }
+  })
+
+  return items
 }
 
-export async function getLastestPostSummary() {
+export function getAllPosts(fields = []) {
+  const slugs = getPostSlugs()
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  return posts
+}
 
-  const allPosts = await getAllPosts()
+export async function getLatestPostSummary() {
 
-  return allPosts[0].summary;
+  const allPosts = await getAllPosts(['content', 'date'])
+  return allPosts[0].content.slice(0,200);
 
 }

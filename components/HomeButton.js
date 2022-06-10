@@ -1,16 +1,15 @@
 import Link from "next/link";
-import styles from "./button.module.css";
+import Image from 'next/image'
+import ButtonStyle from "./ButtonStyle";
+
 
 const HomeButton = props => (
-    <div>
-    <Link href="/">
-    <a className={styles.button}>
-      <div>
-        <img src="../icons/house.svg"></img>
-      </div>
-    </a>
-    </Link>
-  </div>
+  
+    <ButtonStyle>
+      <Link href="/">
+        <Image src="/icons/house.svg" alt='house' width='25' height='25'></Image>
+      </Link>
+    </ButtonStyle>
 );
 
 export default HomeButton;

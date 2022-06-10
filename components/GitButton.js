@@ -1,16 +1,15 @@
 import Link from "next/link";
-import styles from "./button.module.css";
+import Image from 'next/image'
+import ButtonStyle from "./ButtonStyle";
+
 
 const GitButton = props => (
-    <div>
-    <Link href="https://github.com/colbyhemond">
-    <a className={styles.button}>
-      <div>
-        <img src="/icons/github.svg"></img>
-      </div>
-    </a>
-    </Link>
-  </div>
+  
+    <ButtonStyle>
+      <Link href="https://github.com/colbyhemond">
+        <Image src="/icons/github.svg" alt='githublogo' width='25' height='25'></Image>
+      </Link>
+    </ButtonStyle>
 );
 
 export default GitButton;

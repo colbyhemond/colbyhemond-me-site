@@ -1,7 +1,6 @@
 ---
-slug: Adding-a-Pre-Existing-Website-to-GitHub
 title: Adding a Pre-Existing Website to GitHub
-date: 2020-07-15T21:00:58.206Z
+date: '2020-07-15T21:00:58.206Z'
 summary: If you are like me, you don't use GitHub nearly as much as you should.
   Because of that, you always seem to forget how simple the process of the Git
   commands can be. Well, fear no more, you might as well bookmark this blog post
@@ -48,7 +47,7 @@ Now you have an empty repository for your project on GitHub. Next you will have 
 
 Head back to your terminal window.
 
-Open up the connection between the repository on GitHub and the repository on your local machine with `git remote add origin https://github.com/username/new_repo` replacing **username** with your GitHub username and **new_repo** with the repository you just created on GitHub.
+Open up the connection between the repository on GitHub and the repository on your local machine with `git remote add origin https://github.com/username/new_repo` replacing **username** with your GitHub username and **new_repo** with the repository you just created on GitHub.
 
 *Optional: If you have SSH set up use* `git remote add origin git@github.com:username/new_repo` *instead. If you need to or want to set up SSH, follow the steps in [this great resource from GitHub](https://docs.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys)*
 

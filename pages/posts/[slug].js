@@ -1,26 +1,69 @@
-import PostLayout from '../post'
 import { getPostBySlug, getAllPosts } from "../api/index"
+import Head from 'next/head'
+import NavGroup from '../../components/NavGroup'
+import PostHeader from '../../components/PostHeader'
+import PostBody from '../../components/PostBody'
+import markdownToHtml from '../../lib/markdownToHtml'
 
-export default function Post(props) {
-  return <PostLayout title={props.title} date={props.date} content={props.content}/>
+
+export default function Post({post}) {
+
+  return (
+    <>
+      <Head>
+        <title>
+          {post.title}
+        </title>
+      </Head>
+      <NavGroup home back />
+        
+      <PostHeader
+        title={post.title}
+        coverImage={post.coverImage}
+        date={post.date}
+        author={post.author}
+      />
+      <PostBody content={post.content} />
+
+    </>
+  )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps({ params }) {
+  let post = getPostBySlug(params.slug, [
+    'title',
+    'date',
+    'slug',
+    'author',
+    'content',
+    'ogImage',
+    'coverImage',
+  ])
+
+  let content = await markdownToHtml(post.content || '')
+  content = content.replaceAll('&nbsp', ' ')
+
   return {
-    props: await getPostBySlug(context.params.slug)
+    props: {
+      post: {
+        ...post,
+        content,
+      },
+    },
   }
 }
 
 export async function getStaticPaths() {
-  let paths = await getAllPosts()
-
-  paths = paths.map(post => ({
-    params: { slug: post.slug }
-  }))
-
+  const posts = getAllPosts(['slug'])
+  
   return {
-    paths: paths,
-    fallback: false
+    paths: posts.map((post) => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      }
+    }),
+    fallback: false,
   }
-
-};
+}

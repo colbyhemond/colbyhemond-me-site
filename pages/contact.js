@@ -1,65 +1,43 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import { attributes, react as HomeContent } from '../content/home.md';
-import HomeButton from '../components/HomeButton'
-import GitButton from '../components/GitButton'
 import NavGroup from '../components/NavGroup'
-import Footer from '../components/Footer'
 
 export default function Contact() {
-  let { title } = attributes;
   return (
     <>
     <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <title>Contact</title>
       </Head>
 
-    {/* <div className={styles.navRow}>
-      <HomeButton/>
-      <GitButton/>
-      </div> */}
       <NavGroup home />
-      
-    <div className={styles.container}>
-      
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <h1 className='text-5xl mt-28 mb-10'>
           Contact
         </h1>
-      <Link href='/success'>Link</Link>
-        <div className={styles.content}>
-            <form name='contact' method='POST' data-netlify="true" action='/success'>
+      
+            <form name='contact' method='POST' data-netlify="true" action='/success' data-netlify-honeypot="bot-field" className='w-11/12 md:w-1/2 lg:1/4'>
+            <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden" hidden>
                     <label>
                     Don’t fill this out if you’re human: <input name="bot-field" />
                     </label>
                 </p>
-                <p>
+                <p className='flex flex-col w-full'>
                     <label htmlFor='name'>Name</label>
-                    <input name='name' id='name' type='text' required></input>
+                    <input className='border' name='name' id='name' type='text' required></input>
                 </p>
-                <p>
-                    <label htmlFor='email'>Emaiil</label>
-                    <input name='email' id='email' type='email' required></input>
+                <p className='flex flex-col w-full'>
+                    <label htmlFor='email'>Email</label>
+                    <input className='border' name='email' id='email' type='email' required></input>
                 </p>
-                <p>
+                <p className='flex flex-col w-full'>
                     <label htmlFor='message'>Message</label>
-                    <textarea rows='5' name='message' id='message' required></textarea>
+                    <textarea className='border' rows='5' name='message' id='message' required></textarea>
                 </p>
-                <p className={styles.centerButton}>
-                    <input className={styles.button} type='submit' value='Send It!'></input>
+                <p className='w-full flex justify-center'>
+                    <input className='border-4 mt-5 px-3 py-1 border-gray-600 cursor-pointer' type='submit' value='Send It!'></input>
                 </p>
             </form>
-        </div>
-    
-      </main>
 
-      <Footer/>
-    </div>
     </>
   )
 }

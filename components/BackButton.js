@@ -1,16 +1,17 @@
 import { useRouter } from 'next/router'
-import styles from "./button.module.css";
+import Image from 'next/image'
+import ButtonStyle from './ButtonStyle';
+
 
 export default function BackButton() {
   const router = useRouter()
   
   return(
-    <div>
-    <a className={styles.button} onClick={() => router.back()}>
-      <div>
-        <img src="../icons/left_arrow.svg"></img>
-      </div>
+    <a onClick={() => router.back()} className='flex place-content-center'>
+    <ButtonStyle>
+        <Image src="/icons/left_arrow.svg" alt='backbutton' width='20' height='20'></Image>
+    </ButtonStyle>
     </a>
-    </div>
+    
   )
 };
