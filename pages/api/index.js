@@ -48,7 +48,7 @@ export function getAllPosts(fields = []) {
 
 export async function getLatestPostSummary() {
 
-  const allPosts = await getAllPosts(['content', 'date'])
-  return allPosts[0].content.slice(0,200);
+  const allPosts = await getAllPosts(['summary', 'date'])
+  return allPosts[0].summary.slice(0,200);
 
 }
