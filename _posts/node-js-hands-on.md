@@ -8,10 +8,11 @@ summary: There's no better way to learn, than by practicing. The posts linked in
 
 There's no better way to learn, than by practicing. The posts linked in this article are going to be a hands on approach to learning about Node.JS from installation to the fundamentals for creating Node.js based applications.
 
-My motivation to start this list of posts is my preparation for the [OpenJS Node.js Application Developer (JSNAD) certification](https://training.linuxfoundation.org/certification/jsnad/). The goal with each post is to learn and enforce the knowledge through application, by actually developing small projects focusing on each concept.
+My motivation to start this list of posts is my preparation for the [OpenJS Node.js Application Developer (JSNAD) certification](https://training.linuxfoundation.org/certification/jsnad/). The goal with each post is to learn and reinforce the knowledge through application, by actually developing small projects focusing on each concept.
 
 ## Installing Node & Getting Set Up
-* (coming soon)
+* [Installing Node via nvm (Node Version Manager)](/posts/installing-node)
 
+More on the way!
 
 Comments, feedback, and criticism is always appreciated. Feel free to [send me a message](/contact)!
