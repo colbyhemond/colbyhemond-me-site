@@ -25,7 +25,7 @@ const stringBase64 = stringBuffer.toString('base64')
 ```javascript
 const base64String = 'dGhpcyBzdHJpbmcgd2lsbCBiZSBjb252ZXJ0ZWQgdG8gYmFzZTY0'
 const base64Buffer = Buffer.from(base64String, 'base64')
-const string =  decodingBuffer.toString()
+const string =  base64Buffer.toString()
 
 // will output: "this string will be converted to base64"
 ```
