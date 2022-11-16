@@ -2,7 +2,7 @@
 
 const resume = {
     summary: {
-        description: 'Colby has over 8 years experience working as a software developer. He has worked on multiple enterprise wide software implementation projects that integrate with many other systems. He started out as an SAP ABAP developer focusing on back-end development, and is striving to become a full stack web developer with a focus on React and Node.js. He has worked remotely in some capacity since 2016, because of this he has become comfortable with communicating asynchronously and maintaining contact with teammates and managers to stay in the loop.'
+        description: 'Colby has over 8 years experience working as a software developer. He has worked on multiple enterprise wide software implementation projects that integrate with many other systems. He started out as an SAP ABAP developer focusing on back-end development, and throughout his career he has built up his web development skills as well. He has worked remotely in some capacity since 2016, because of this he has become comfortable with communicating asynchronously and maintaining contact with teammates and managers to stay in the loop.'
     },
     experience: [
             {
@@ -107,7 +107,7 @@ const resume = {
                 id: 9,
                 company: 'TekSystems - Auto-Owners Insurance',
                 dateStart: '2021-07-01T12:00:00.000Z',
-                dateEnd: null,
+                dateEnd: '2022-08-26T12:00:00.000Z',
                 jobTitle: 'SAP ABAP Consultant',
                 duties: [
                     { id: 1, duty: 'Maintain existing SOAP web service integrations and documentation so that the front-end development team can implement them exposing functionality to the web pages'},
@@ -115,6 +115,18 @@ const resume = {
                     { id: 3, duty: 'Teach and Lead teammates in various small projects from a remote office using phone, WebEx, and Slack'}
                 ],
                 skills: ["SAP Software", "ABAP Programming Language", "SOAP Web Services", "Object Oriented Programming", "Agile Project Management Methodologies", "Test Driven Development", "Pair Programming", "Design Patterns"]
+            },
+            {
+                id: 10,
+                company: 'Bowdark Consulting',
+                dateStart: '2022-09-15T12:00:00.000Z',
+                dateEnd: null,
+                jobTitle: 'SAP Senior Technical Consultant',
+                duties: [
+                    { id: 1, duty: "Assist in solution implementation into client's software ecosystem"},
+                    { id: 2, duty: "Communicate experiences and learning through blog posts"},
+                ],
+                skills: ["SAP Software", "ABAP Programming Language", "SAP UI5"]
             }
     ],
     education: {
@@ -206,11 +218,11 @@ const resume = {
         },
         {
             id: 4,
-            project: 'DH Goals',
+            project: 'Rise and Shine Goals',
             type: 'Web App',
-            status: 'In Progress',
+            status: 'Complete',
             creationDate: '2021-010-01T12:00:00.000Z',
-            description: 'DH-Goals is a demo project currently being worked on to allow Medical Students submit weekly goals, then at the end of the week they evaluate themselves and their supervising Resident evaluates them. Admins will be able to view reports and progress. Airtable is used as a database, and is connected to the website via the Airtable API. Airtable is utilized to easily create views for reports and to automate record creation and notifications.',
+            description: "Rise and Shine Goals was implemented with Dartmouth Geisel School of Medicine and Dartmouth Medical Center's Internal Medicine Residence program. The application allows Medical Students to submit weekly goals, then at the end of the week they evaluate themselves and their supervising Resident evaluates them. Admins will be able to view reports and progress. Airtable is used as a database, and is connected to the website via the Airtable API. Airtable is utilized to easily create views for reports and to automate record creation and notifications.",
             technologies: ['React', 'Next.js', 'Netlify Identity', 'Netlify', 'AirTable'],
             URL: 'https://elegant-mcnulty-986ed9.netlify.app/',
             gitRepository: 'https://github.com/colbyhemond/dh-goals'
