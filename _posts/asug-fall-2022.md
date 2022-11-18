@@ -21,11 +21,11 @@ The presentations I attended were valuable in exposing the audience to ideas and
 
 ### Accelerate your S/4HANA journey with SAP RISE
 Having seen and heard the words “SAP RISE” but never doing the research on what it actually is, this presentation was beneficial to get an understanding of what it is and what it offers. Did you know that SAP RISE includes:
+- S/4HANA
+- Business Technology Platform
+- SAP Signavio
+- Business Networking
 
-### S/4HANA
-Business Technology Platform
-SAP Signavio
-Business Networking
 It was mentioned that most customers focus just on S/4HANA and don’t necessarily leverage the other offerings.
 
 ### The future of APIA with SAP
