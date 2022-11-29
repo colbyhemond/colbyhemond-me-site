@@ -6,8 +6,11 @@ const OpenGraphImage = ({ title }) => {
             src="images/white"
             overlays={[{
                 text: {
-                    text: title,
-                    fontSize: 200
+                    text: title.toUpperCase(),
+                    fontSize: 100,
+                    fontFamily="Montserrat",
+                    width: '90%',
+                    height: '90%'
                 }
             }]}/>
         
