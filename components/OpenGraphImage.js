@@ -4,7 +4,12 @@ const OpenGraphImage = ({ title }) => {
     return (<>
         <CldOgImage 
             src="images/white"
-            text={title}/>
+            overlays={[{
+                text: {
+                    text: title,
+                    fontSize: 200
+                }
+            }]}/>
         
     </>)
 }
