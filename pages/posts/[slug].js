@@ -9,6 +9,14 @@ import OpenGraphImage from "../../components/OpenGraphImage"
 
 export default function Post({post}) {
 
+  const convertToUrl = (text) => {
+    return text.replace(' ', '%20')
+
+}
+
+let text = convertToUrl(post.title).toUpperCase()
+let ogUrl = `https://res.cloudinary.com/dhhijcjym/image/upload/c_fill,w_2400,h_1200,g_center/w_2000,c_fit,l_text:Montserrat_100_bold:${text},/fl_layer_apply,fl_no_overflow/f_auto/q_auto/v1/images/white`
+
   return (
     <>
       <Head>
@@ -23,7 +31,7 @@ export default function Post({post}) {
         <meta property="og:type" content="website"/>
         <meta property="og:title" content={post.title}/>
         <meta property="og:description" content={post.summary}/>
-        <meta property="og:image" content={OpenGraphImage()}/>
+        <meta property="og:image" content={ogUrl}/>
 
         {/*<!-- Twitter Meta Tags -->*/}
         <meta name="twitter:card" content="summary_large_image"/>
@@ -31,11 +39,10 @@ export default function Post({post}) {
         <meta property="twitter:url" content={`https://colbyhemond.me/posts/${post.slug}`}/>
         <meta name="twitter:title" content={post.title}/>
         <meta name="twitter:description" content={post.summary}/>
-        <meta name="twitter:image" content={OpenGraphImage()}/>
+        <meta name="twitter:image" content={ogUrl}/>
         <meta property="twitter:site" content="@colbyhemond" />
         
       </Head>
-      <OpenGraphImage title={post.title}/>
       <NavGroup home back />
         
       <PostHeader
