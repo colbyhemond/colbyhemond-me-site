@@ -14,6 +14,23 @@ export default function Post({post}) {
         <title>
           {post.title}
         </title>
+        <meta name="description" content={post.title} />
+        <meta name="author" content={post.author}/>
+
+        {/*<!-- Facebook Meta Tags -->*/}
+        <meta property="og:url" content={`https://colbyhemond.me/posts/${post.slug}`}/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content={post.title}/>
+        <meta property="og:description" content={post.summary}/>
+        <meta property="og:image" content=""/>
+
+        {/*<!-- Twitter Meta Tags -->*/}
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:domain" content="colbyhemond.me"/>
+        <meta property="twitter:url" content={`https://colbyhemond.me/posts/${post.slug}`}/>
+        <meta name="twitter:title" content={post.title}/>
+        <meta name="twitter:description" content={post.summary}/>
+        <meta name="twitter:image" content=""></meta>
       </Head>
       <NavGroup home back />
         
