@@ -3,7 +3,7 @@ import { CldOgImage } from 'next-cloudinary'
 const OpenGraphImage = ({ title }) => {
 
     const convertToUrl = (text) => {
-        text.replace(' ', '%20')
+        return text.replace(' ', '%20')
 
     }
 
