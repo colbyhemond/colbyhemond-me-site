@@ -33,8 +33,9 @@ export default function Post({post}) {
         <meta name="twitter:description" content={post.summary}/>
         {/* <meta name="twitter:image" content=""></meta> */}
         <meta property="twitter:site" content="@colbyhemond" />
-        <OpenGraphImage title={post.title}/>
+        
       </Head>
+      <OpenGraphImage title={post.title}/>
       <NavGroup home back />
         
       <PostHeader
