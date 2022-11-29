@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Disallow: /success
 
 Sitemap: https://colbyhemond.me/sitemap.xml
