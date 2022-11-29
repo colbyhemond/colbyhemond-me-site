@@ -10,7 +10,7 @@ import OpenGraphImage from "../../components/OpenGraphImage"
 export default function Post({post}) {
 
   const convertToUrl = (text) => {
-    return text.replaceAll(' ', '%20')
+    return text.replace(/ /g, '%20')
 
 }
 
