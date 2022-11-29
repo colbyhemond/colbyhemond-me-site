@@ -14,6 +14,8 @@ export default function Post({post}) {
         <title>
           {post.title}
         </title>
+        <meta name="description" content={post.title} />
+        <meta name="author" content={post.author}/>
       </Head>
       <NavGroup home back />
         
