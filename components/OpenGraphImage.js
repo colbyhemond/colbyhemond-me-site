@@ -2,7 +2,9 @@ import { CldOgImage } from 'next-cloudinary'
 
 const OpenGraphImage = ({ title }) => {
     return (<>
-        <CldOgImage text={title}/>
+        <CldOgImage 
+            src="images/white"
+            text={title}/>
         
     </>)
 }
