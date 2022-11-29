@@ -3,8 +3,8 @@ title: Creating a Destination in SAP for making requests to HTTPS secured APIs
 subtitle: 
 status: published
 date: '2022-11-29T12:00:00.000Z'
-tags: [nodejs, buffer, npm]
-summary: You can encode a string to base64 in Node.js without the use of an ecosystem library. Node comes with "batteries included" and allows us to encode to base64 using a core API
+tags: [sap, abap, ssl]
+summary: Creating a destination in SAP for reusability across API calls within your ABAP code
 ---
 This is a walkthrough showing how to create a https destination in SAP in order to be able to call an external API within your ABAP code.
 
