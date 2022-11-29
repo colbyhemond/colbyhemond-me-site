@@ -10,8 +10,11 @@ import OpenGraphImage from "../../components/OpenGraphImage"
 export default function Post({post}) {
 
   const convertToUrl = (text) => {
-    return text.replace(/ /g, '%20')
-
+    let urlText
+    urlText = text.replace(/ /g, '%20')
+    urlText = urlText.replace(/,/g, '%2C')
+    urlText = urlText.replace(/!/g, '%21')
+    return urlText
 }
 
 let text = convertToUrl(post.title).toUpperCase()
