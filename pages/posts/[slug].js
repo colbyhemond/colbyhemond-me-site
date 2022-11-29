@@ -4,6 +4,7 @@ import NavGroup from '../../components/NavGroup'
 import PostHeader from '../../components/PostHeader'
 import PostBody from '../../components/PostBody'
 import markdownToHtml from '../../lib/markdownToHtml'
+import OpenGraphImage from "../../components/OpenGraphImage"
 
 
 export default function Post({post}) {
@@ -22,7 +23,7 @@ export default function Post({post}) {
         <meta property="og:type" content="website"/>
         <meta property="og:title" content={post.title}/>
         <meta property="og:description" content={post.summary}/>
-        <meta property="og:image" content=""/>
+        {/* <meta property="og:image" content=""/> */}
 
         {/*<!-- Twitter Meta Tags -->*/}
         <meta name="twitter:card" content="summary_large_image"/>
@@ -30,7 +31,9 @@ export default function Post({post}) {
         <meta property="twitter:url" content={`https://colbyhemond.me/posts/${post.slug}`}/>
         <meta name="twitter:title" content={post.title}/>
         <meta name="twitter:description" content={post.summary}/>
-        <meta name="twitter:image" content=""></meta>
+        {/* <meta name="twitter:image" content=""></meta> */}
+        <meta property="twitter:site" content="@colbyhemond" />
+        <OpenGraphImage title={post.title}/>
       </Head>
       <NavGroup home back />
         
