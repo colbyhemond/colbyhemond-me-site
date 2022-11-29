@@ -8,7 +8,7 @@ const OpenGraphImage = ({ title }) => {
                 text: {
                     text: title.toUpperCase(),
                     fontSize: 100,
-                    fontFamily="Montserrat",
+                    fontFamily: "Montserrat",
                     width: '90%',
                     height: '90%'
                 }
