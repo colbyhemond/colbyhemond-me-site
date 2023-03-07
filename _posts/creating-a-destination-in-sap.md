@@ -8,7 +8,7 @@ summary: Creating a destination in SAP for reusability across API calls within y
 ---
 This is a walkthrough showing how to create a https destination in SAP in order to be able to call an external API within your ABAP code.
 
-## The Problem
+# The Problem
 When you just plug in an https URL for an API endpoint and just fire away, you will probably receive an exception relating to `HTTP_COMMUNICATION_FAILURE` . However, there isn't much explanation to understand why specifically the communication with the API failed.
 
 ```
@@ -34,40 +34,40 @@ http_client->receive(
 . . .
 ```
 
-## The Solution
+# The Solution
 
 We will set up a destination connection so that we can replace `cl_http_client=>create_by_url( )` with `cl_http_client=>create_by_destination( )`
 
-### Steps
+## Steps
 - Create the Destination Connection
 - Add SSL certificates
 - Test the connection
 
-### Create the Destination Connection
+## Create the Destination Connection
 - Go to transaction `SM59`
 - Click Create 
 
-#### Create Destination Popup
+### Create Destination Popup
 - Destination: Define the name of your destination (this can be anything you want it to be)
 - Connection Type: G - HTTP connection to external server
 - Click Continue
 
-#### RFC Destination Screen - Technical Settings Tab
+### RFC Destination Screen - Technical Settings Tab
 - Description 1: Add a short explanation of the destination
 - Host: This is the domain of the API. Example: `api.example.com`
 - Port: Use `443` by default unless someone specifies otherwise
 - Path Prefix: This is optional. But if there is a specific path for the API that that doesn't change you can enter that here
 
-#### RFC Destination Screen - Logon & Security Tab
+### RFC Destination Screen - Logon & Security Tab
 - SSL: Active
 - SSL Certificate: ANONYM SSL Client (Anonymous)
 
 At this point, if you click the "Connection Test" button, the test should fail because we have not yet provided the details about the SSL certificates to the system.
 
-### Adding SSL Certificates
+## Adding SSL Certificates
 We will need to download the SSL certificates to our local computer, and add them to the system in transaction `STRUST`.
 
-#### Downloading the certificates
+### Downloading the certificates
 - Open your web browser
 - Navigate to the URL of the API you are working with
 - Click the lock symbol at the beginning of the URL
@@ -79,7 +79,7 @@ We will need to download the SSL certificates to our local computer, and add the
 - Save in a place you can remember to get to
 - Repeat the Export with the remain certificates in the Certificate Hierarchy chain
 
-#### Adding the certificates to the system in `STRUST`
+### Adding the certificates to the system in `STRUST`
 - Go to transaction code `STRUST`
 - Expand the folder "SSL client SSL Client (Anonymous)"
 - Click on your system's name
@@ -87,7 +87,7 @@ We will need to download the SSL certificates to our local computer, and add the
 - Click Add to Certificate List
 - Repeat for remaining certificates
 
-### Test the Connection
+## Test the Connection
 - Go back to transaction `SM59`
 - Open the destination you created previously
 - Click the "Connection Test" button
