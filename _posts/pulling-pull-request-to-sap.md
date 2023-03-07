@@ -1,7 +1,7 @@
 ---
 title: How to pull in a pull request's changes into your SAP system 
 subtitle: 
-status: published
+status: draft
 date: '2023-03-07T12:00:00.000Z'
 tags: [abap, sap, abapgit]
 summary: Getting comfortable with git as an ABAP developer is tough enough. Here's a complex flow to help you view others changes to a project in your local system.
