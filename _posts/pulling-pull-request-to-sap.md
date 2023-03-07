@@ -1,59 +1,47 @@
 ---
-title: Setting up a Zapier Webhook to Create Tweets
+title: How to pull in a pull request's changes into your SAP system 
 subtitle: 
 status: published
-date: '2022-12-07T12:00:00.000Z'
-tags: [zapier, webhook, twitter]
-summary: How to setup a "zap" that utilizes the Zapier Webhook and Twitter in order to create a tweet using a POST request.
+date: '2023-03-07T12:00:00.000Z'
+tags: [abap, sap, abapgit]
+summary: Getting comfortable with git as an ABAP developer is tough enough. Here's a complex flow to help you view others changes to a project in your local system.
 ---
-You can start automating some of your Twitter tweets by using Zapier integrations. In this post I'll show you how to set up a Zapier "zap" that catches a webhook and creates a tweet. We will be using the two Zapier apps:
-- [Webhooks by Zapier](https://zapier.com/apps/webhook/integrations)
-- [Twitter](https://zapier.com/apps/twitter/integrations)
+Sometimes you need to review code and actually be able to run it rather than just looking at code files on GitHub. It helps us fully understand changes when we can actually run and step through the code in the debugger. Othertimes you might just be curious or an over bearing teammate. 🤔 Who am I to judge? You do you.
 
-## Setting up the Zap
-- Create a new zap
-- search for the "Webhooks by Zapier" app and select it
-### Setting up the webhook trigger
-#### Choose app & event
-- "Webhooks by Zapier" should already be selected
-- Event: "Catch Hook"
-- Click Continue
+Regardless of the situtation, trying to get the code changes that are in the pull request of the original project that you are working on can be a bit tricky. Especially when you are working off of a fork of the project, which add a whole extra layer of complexity to the equation.
 
-#### Set up trigger
-- Pick off a Child Key: This is not required and can be ignored
-- Click Continue
+The following article will walk you through being able to pull the changes from a pull request into your SAP system, but with the extra complexity of a fork of the repository between the source repository and the SAP system.
 
-#### Test Trigger
-- Copy the URL
-- Go to [resttesttest.com](https://resttesttest.com)
-- Method: POST
-- Endpoint: Your webhook URL copied in the previous step
-- Parameter Name: message
-- Parameter Value: hello from zapier!
-- Click "Ajax request"
-- Go back to your zap and click "test"
-- The zap should have found your request and you can verify the message parameter was sent through
-- If this was successful, click continue
 
-### Set up the tweet creation
-#### Choose app & event
-- Search for and select Twitter as your next app
-- Event: Create Tweet
 
-#### Choose account:
-- Select your twitter account. Log in and allow Zapier access if needed
+Let's set the scene...you have the source repository. You have created a fork of the source repository, this is your remot repository. You have made an online connection between that remote repositoy and your SAP system using abapfit. When you are workign on the project there may be various other contributors. When this happens they likely have the same development workflow set up. You may be curious as to what they have developed and want to check it out yourself before those changes are merged into tht eh main branch. Or you may be a code reviewer and need to take a deeper look at the code or test it out yourself. In these scenarios you need to pull the code from the pull request to your local system so that you can test out those changes.
 
-#### Set up action:
-- Message: Select the "Message" parameter from the drop down list that appears
-- Image: select the "Image" parameter from the drop down list that appears
-- Click continue
+As far as I know ther isn't a direct way to do this with abapit. Here is how you can solve this issue.
+You need to open the command line and clone or navigate to where you have the project folder stored on your machine. You have your remote origin connection set up to be connected to you fork. But you need to get the PR changes from the original repository. Therefore we need to set up an additional remote connection. you can do this with the following command:
 
-#### Test action
-If you choose to test the action, know that this will create a tweet on your twitter account. So be prepared to take action!
+```git 
+git remote -v
+```
 
-## Conclusion
+```git
+git remote add my-new-remote https://github.com/USER/REPO.git
+```
 
-There you have it! You're one step closer to automating your tweeting habit! Now what to tweet about?
+Now that we have added the source projects remote, we are able to pull in the changes from the pull request as a new branch. In order to do this we can run the following commands:
 
-For additional information about Zapier Webhooks check out this [Brief introduction to Webhooks](https://help.zapier.com/hc/en-us/articles/8496083355661-How-to-Get-Started-with-Webhooks-by-Zapier#sending-an-array-of-objects-0-10) on Zapiers help center.
+First get the ID number from the pull request. You can find this in the repositories GUI by going to the PR and looking at the end of the title.
 
+Use that ID number with the following command
+
+```git
+git fetch my-new-remote pull/ID/head:BRANCH_NAME
+```
+
+Now the changes have been fetched into your local, but we need to actuall switch over and creat that branch
+
+```git
+git checkout BRANCH_NAME
+```
+
+Checking out pull requests locally: 
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally
