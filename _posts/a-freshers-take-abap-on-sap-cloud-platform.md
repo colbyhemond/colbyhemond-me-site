@@ -4,7 +4,7 @@ subtitle:
 status: published
 date: '2023-03-09T12:00:00.000Z'
 tags: [abap, sap, cloud]
-summary: yeah
+summary: Originally when I wrote this post, over 5 years ago, I had written about my thoughts around SAP Cloud Platform (now BTP - Business Technology Platform) and how I was going to start preparing for cloud development as an up and coming ABAP developer. Since that post has be lost in the internet ether and unable to be recovered, I can only remember so much about what I had wrote back then.
 ---
 
 > *The original post was written October 5th, 2017.* This post has been recreated. I have monitored my site analytics for a while and this post is the consistently reoccurring one that shows up in my 404 list. I've recreated and redesigned my website multiple times since then and have lost the original content. This is an updated version of the post, remembering what I can of the old post and adding in some new takes as well.
