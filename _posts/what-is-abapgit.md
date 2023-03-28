@@ -24,12 +24,11 @@ You made a decision to use SAP for a reason, maybe you chose to add in extra cus
 The first question you must answer is, Do you have other development teams outside of your SAP team? If your answer is yes, they are most likely already using Git for their source code version control. Just ask them. If they are, then abapGit will allow SAP developers to add their code to the same place as those other teams, you've just made the decision.
 
 But what can abapGit do for you?
+* Agility -- It will help your teams become more agile. abapGit will enable your Functional and Technical teams to have a finer granularity of the changes made. This can help fix problems faster or try out new features faster with more control.
 
-* Agility - It will help your teams become more agile. abapGit will enable your Functional and Technical teams to have a finer granularity of the changes made. This can help fix problems faster or try out new features faster with more control.
+- Resource Reuse -- If you have teams currently using Git, then those teams might already be well versed in development operations (DevOps) and creating continuous integration/continuous deployment (CI/CD) pipelines to help stabilize their deployment processes. Leverage those resources to help your SAP team get a powerful and stable deployment process. Your SAP team knows SAP and ABAP, your other teams know Git and DevOps. Use this as an opportunity for up-skilling and cross-training.
 
-* Resource Reuse - If you have teams currently using Git, then those teams might already be well versed in development operations (DevOps) and creating continuous integration/continuous deployment (CI/CD) pipelines to help stabilize their deployment processes. Leverage those resources to help your SAP team get a powerful and stable deployment process. Your SAP team knows SAP and ABAP, your other teams know Git and DevOps. Use this as an opportunity for up-skilling and cross-training.
-
-* Costs Savings - If you read the two bullet points above and didn't already think of how those benefits can help save costs. Then this is me telling you that the improved efficiencies and leveraging your current resources could potentially help avoid and fix costly bugs and having to learn from the ground up.
+* Costs Savings -- If you read the two bullet points above and didn't already think of how those benefits can help save costs. Then this is me telling you that the improved efficiencies and leveraging your current resources could potentially help avoid and fix costly bugs and having to learn from the ground up.
 
 
 # Functional Analysts and Business Analysts
