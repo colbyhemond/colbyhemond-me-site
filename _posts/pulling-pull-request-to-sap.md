@@ -83,7 +83,7 @@ git push origin BRANCH_NAME
 
 ## Using abapGit to refresh and switch to the new branch
 
-In abapGit, cllick into the repository. Now click **Refresh** to ensure you has the most up to date changes. Now hover over **Branch** and click **Switch** so that you can select the pull request branch that you recently added to your forked repository.
+In abapGit, click into the repository. Now click **Refresh** to ensure you has the most up to date changes. Now hover over **Branch** and click **Switch** so that you can select the pull request branch that you recently added to your forked repository.
 
 ![Refresh and Switch](/images/abapgit_refresh_switch.png)
 
