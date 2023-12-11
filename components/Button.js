@@ -12,6 +12,7 @@ const ButtonContents = forwardRef(({ onClick, href, children }, ref) => {
   )
 })
 
+ButtonContents.displayName = "ButtonContents";
 
 const Button = ({children, href}) => (
   <Link href={href} passHref legacyBehavior>
