@@ -15,16 +15,24 @@
   @apply my-4;
 }
 
+.markdown h1 {
+  @apply text-3xl mt-10 mb-2 leading-snug font-bold;
+}
+
 .markdown h2 {
   @apply text-2xl mt-10 mb-2 leading-snug font-semibold;
 }
 
 .markdown h3 {
-  @apply text-lg mt-6 mb-2 leading-snug font-normal;
+  @apply text-lg mt-6 mb-2 leading-snug font-semibold;
+}
+
+.markdown h4 {
+  @apply mt-6 mb-2 leading-snug font-semibold;
 }
 
 .markdown pre {
-  @apply overflow-scroll rounded bg-gray-800 text-gray-300 mt-1 mb-3 p-4;
+  @apply overflow-auto rounded bg-gray-800 text-gray-300 mt-1 mb-3 p-4;
 
 }
 
@@ -49,4 +57,8 @@
 
 .markdown li {
   @apply list-disc list-inside;
+}
+
+.markdown blockquote {
+  @apply border-l-8 border-l-orange-300 px-5 py-1 bg-gray-100
 }

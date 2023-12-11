@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <script defer src="https://app.tinyanalytics.io/pixel/Iitjq1SauXcDhYVo"></script>
         </Head>
         <body>
           <Main />
